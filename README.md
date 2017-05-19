@@ -1,7 +1,7 @@
 JSX语法
 
-定义：JSX像是在Javascript代码里直接写XML的语法，每一个XML标签都会被JSX转换工具转换成纯Javascript代码
-结构：var demo = <\h1\>hello world!\</h1\>;
+定义：JSX像是在Javascript代码里直接写XML的语法，每一个XML标签都会被JSX转换工具转换成纯Javascript代码。
+结构：var demo = \<h1\>hello world!\</h1\>;
 
 ReactDOM.render语法结构：
 var React = require('react');

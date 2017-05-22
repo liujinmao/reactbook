@@ -38,7 +38,7 @@ var = （\<ul\>
  1、一般用于列表渲染、数组处理等,<br>
  例：var personName = ['Amy','Anna','Ener'];<br>
 var personList = personName.map(function(person,i){ return \<li key="person_" + i\>{person}\</li\>});<br>
- ReactDOM.render(\<ul\>{personList}\</ul\>,document.getElementById('..'));<br><hr>
+ ReactDOM.render(\<ul\>{personList}\</ul\>,document.getElementById('..'));<br>
  
  ReactDOM.creatElement()<br>
  用来创建DOM元素，例：ReactDOM.creatElement(“p”,null, "内容")；<br><br><hr>
@@ -52,6 +52,6 @@ var personList = personName.map(function(person,i){ return \<li key="person_" + 
      });
 
 ReactDOM.render(
-	\<MyComponentClass /\>,
-  document.getElementById('app')
+   \<MyComponentClass /\>,
+    document.getElementById('app')
 );<br>

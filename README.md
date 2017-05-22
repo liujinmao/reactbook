@@ -19,23 +19,29 @@ ReactDOM.render()注意点：<br>
         \<p\>\</p\>
       );
   这是错误的，最外层没有一个父级包裹，不会运行；<br>
-4、相同的dom不能同时在一个类名里执行两次，<br><br>
+4、相同的dom不能同时在一个类名里执行两次，<br><br><hr>
 
 inject:
 JSX语句里不能注入if声明语句；<br>
 if条件语句可以写在外面，例如: function coninToss(){return math.random()*10};            
 if(coninToss() == 1){var h = \<h1\>我是一个大数\</h1\>}else{var h = \<h1\>我是一个小数\</h1\>}；
-或者直接var h1 = \<h1\>{coninToss() == 1 ? "我是一个大数" : "我是一个小数"  }\</h1\>{};
+或者直接var h1 = \<h1\>{coninToss() == 1 ? "我是一个大数" : "我是一个小数"  }\</h1\>;
 ReactDOM.render(h1,document.getElementById('..'));<br>
 if 语句除了运用三木运算符之外还可以用<strong>&&</strong>
 var = （\<ul\>
   \<li\>{ coninToss()>0 } && item 1\</li\>
   \<li\>{ coninToss()>3 } && item 2\</li\>
   \<li\>{ coninToss()>7 } && item 3\</li\>
-\</ul\>）<br /><br />
+\</ul\>）<br /><br /><hr>
  
  map的使用<br>
  1、一般用于列表渲染、数组处理等,<br>
  例：var personName = ['Amy','Anna','Ener'];<br>
- function personList = personName.map(function(person,i){ return \<li key="person_" + i\>{person}\</li\>});<br>
- ReactDOM.render(\<ul\>{personList}\</ul\>,document.getElementById('..'));<br>
+var personList = personName.map(function(person,i){ return \<li key="person_" + i\>{person}\</li\>});<br>
+ ReactDOM.render(\<ul\>{personList}\</ul\>,document.getElementById('..'));<br><hr>
+ 
+ ReactDOM.creatElement()<br>
+ 用来创建DOM元素，例：ReactDOM.creatElement(“p”,null, "内容")；<br>
+ 
+ 
+ 

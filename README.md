@@ -1,13 +1,13 @@
-（一）JSX语法
+（一）<strong>JSX语法</strong>
 
 定义：JSX像是在Javascript代码里直接写XML的语法，每一个XML标签都会被JSX转换工具转换成纯Javascript代码;<br>
 结构：var demo = \<h1\>hello world!\</h1\>;
 
 ReactDOM.render语法结构：<br>
-var React = require('react');<br>
-var ReactDOM = require('react-dom');<br>
+var React = require('react') -> 在你的文件里储存了一个js对象，对象里包含react方法例如：React.createElement、React.createClass;<br>
+var ReactDOM = require('react-dom') -> 储存了另一个js对象，对象里包含的方法对DOM交互相关;<br>
 var theBestString = 'tralalalala i am da best';<br>
-ReactDOM.render(\<h1\>{theBestString}\</h1\>, document.getElementById('app'));<br><br><hr>
+ReactDOM.render(\<h1\>{theBestString}\</h1\>, document.getElementById('app'));<br><br>
 
 
 ReactDOM.render()注意点：<br>
@@ -19,7 +19,7 @@ ReactDOM.render()注意点：<br>
         \<p\>\</p\>
       );
   这是错误的，最外层没有一个父级包裹，不会运行；<br>
-4、相同的dom不能同时在一个类名里执行两次，<br><br><hr>
+4、相同的dom不能同时在一个类名里执行两次，<br><br>
 
 inject:
 JSX语句里不能注入if声明语句；<br>
@@ -32,7 +32,7 @@ var = （\<ul\>
   \<li\>{ coninToss()>0 } && item 1\</li\>
   \<li\>{ coninToss()>3 } && item 2\</li\>
   \<li\>{ coninToss()>7 } && item 3\</li\>
-\</ul\>）<br /><br /><hr>
+\</ul\>）<br /><br />
  
  map的使用<br>
  1、一般用于列表渲染、数组处理等,<br>
@@ -41,7 +41,17 @@ var personList = personName.map(function(person,i){ return \<li key="person_" + 
  ReactDOM.render(\<ul\>{personList}\</ul\>,document.getElementById('..'));<br><hr>
  
  ReactDOM.creatElement()<br>
- 用来创建DOM元素，例：ReactDOM.creatElement(“p”,null, "内容")；<br>
+ 用来创建DOM元素，例：ReactDOM.creatElement(“p”,null, "内容")；<br><br><hr>
  
- 
- 
+ (二)<strong>React Component</strong>
+ react应用是由components（组件）组成；<br>
+ 例：var MyComponentClass = ReactDOM.createClass({
+          render: function(){
+            return \<h1\>hello world\</h1\>;
+         }
+     });
+
+ReactDOM.render(
+	\<MyComponentClass /\>,
+  document.getElementById('app')
+);<br>

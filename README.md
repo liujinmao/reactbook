@@ -21,9 +21,9 @@ ReactDOM.render()注意点：<br>
   这是错误的，最外层没有一个父级包裹，不会运行；<br>
 4、相同的dom不能同时在一个类名里执行两次，<br><br>
 
-inject:
+inject:<br>
 JSX语句里不能注入if声明语句；<br>
-if条件语句可以写在外面，例如: function coninToss(){return math.random()*10};            
+if条件语句可以写在外面，例如: function coninToss(){return math.random()*10};<br>            
 if(coninToss() == 1){var h = \<h1\>我是一个大数\</h1\>}else{var h = \<h1\>我是一个小数\</h1\>}；
 或者直接var h1 = \<h1\>{coninToss() == 1 ? "我是一个大数" : "我是一个小数"  }\</h1\>;
 ReactDOM.render(h1,document.getElementById('..'));<br>
@@ -32,7 +32,7 @@ var = （\<ul\>
   \<li\>{ coninToss()>0 } && item 1\</li\>
   \<li\>{ coninToss()>3 } && item 2\</li\>
   \<li\>{ coninToss()>7 } && item 3\</li\>
-\</ul\>）<br /><br />
+\</ul\>）<br><br>
  
  map的使用<br>
  1、一般用于列表渲染、数组处理等,<br>
@@ -56,7 +56,7 @@ ReactDOM.render(
     document.getElementById('app')
 );<br><br>
 
-render function, this的使用<br>
+<h2>render function, this的使用</h2><br>
 例：React.createClass({
   myFunc: function () {
     alert('Stop it.  Stop hovering.');
@@ -70,7 +70,7 @@ render function, this的使用<br>
   }
 });<br><br>
 
-component实例化引用<br>
+<h2>component实例化引用</h2><br>
 例：var NavBar = React.creatClass({<br>
       render:function(){
         var pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];<br>

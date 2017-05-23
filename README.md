@@ -83,6 +83,7 @@ component实例化引用<br>
       }
   })<br>
   
+  var NavBar = require('NavBar');<br>
   var ProfilePage = React.createClass({<br>
   render: function () {<br>
    &nbsp;&nbsp; return (<br>

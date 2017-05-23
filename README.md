@@ -73,13 +73,13 @@ render function, this的使用<br>
 component实例化引用<br>
 例：var NavBar = React.creatClass({<br>
       render:function(){
-        var pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];
-        var navLinks = pages.map(function(page){
+        var pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];<br>
+        var navLinks = pages.map(function(page){<br>
              return (
                 \<a  href={'/' + page}\>{page}\</a\>
              )
-        })
-        return <nav>{navLinks}</nav>;
+        })<br>
+        return \<nav\>{navLinks}\</nav\>;
       }
   })<br>
   

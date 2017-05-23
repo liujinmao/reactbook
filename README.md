@@ -56,7 +56,7 @@ ReactDOM.render(
     document.getElementById('app')
 );<br><br>
 
-<h2>render function, this的使用</h2><br>
+render function, this的使用<br>
 例：React.createClass({
   myFunc: function () {
     alert('Stop it.  Stop hovering.');
@@ -70,7 +70,7 @@ ReactDOM.render(
   }
 });<br><br>
 
-<h2>component实例化引用</h2><br>
+component实例化引用<br>
 例：var NavBar = React.creatClass({<br>
       render:function(){
         var pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];<br>

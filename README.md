@@ -43,15 +43,57 @@ var personList = personName.map(function(person,i){ return \<li key="person_" + 
  ReactDOM.creatElement()<br>
  用来创建DOM元素，例：ReactDOM.creatElement(“p”,null, "内容")；<br><br><hr>
  
- (二)<strong>React Component</strong>
- react应用是由components（组件）组成；<br>
- 例：var MyComponentClass = ReactDOM.createClass({
+ (二)<strong>React Component(组件)</strong><br>
+ React 允许将代码封装成组件（component），然后像插入普通 HTML 标签一样，在网页中插入这个组件。；<br>
+ 例：var MyComponentClass = <span style="color:red;">ReactDOM.createClass</span>({
           render: function(){
             return \<h1\>hello world\</h1\>;
          }
-     });
+     });<br>
 
 ReactDOM.render(
    \<MyComponentClass /\>,
     document.getElementById('app')
-);<br>
+);<br><br>
+
+render function, this的使用<br>
+例：React.createClass({
+  myFunc: function () {
+    alert('Stop it.  Stop hovering.');
+  },<br>
+
+  render: function () {
+    return (
+      \<div onHover={this.myFunc}\>
+      \</div\>;
+    );
+  }
+});<br><br>
+
+component实例化引用<br>
+例：var NavBar = React.creatClass({<br>
+      render:function(){
+        var pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];
+        var navLinks = pages.map(function(page){
+             return (
+                \<a  href={'/' + page}\>{page}\</a\>
+             )
+        })
+        return <nav>{navLinks}</nav>;
+      }
+  })<br>
+  
+  var ProfilePage = React.createClass({<br>
+  render: function () {<br>
+   &nbsp;&nbsp; return (<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;\<div\><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;\<NavBar /\><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;\<h1\>All About Me!\</h1\><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;\<p\>I like movies and blah blah blah blah blah\</p\><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;\<img src="https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-monkeyselfie.jpg" /\><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;\</div\><br>
+    );
+  }
+});
+
+

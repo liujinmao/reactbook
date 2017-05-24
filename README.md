@@ -95,6 +95,10 @@ component实例化引用<br>
     &nbsp;&nbsp; &nbsp;&nbsp;\</div\><br>
     );
   }
-});
+});<br><br>
+
+component.props<br>
+
+
 
 
